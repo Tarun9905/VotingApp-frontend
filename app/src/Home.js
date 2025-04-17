@@ -550,7 +550,7 @@ const Home = () => {
     setLoading(true);
 
     axios
-      .post("http://127.0.0.1:8000/emailverify/", { email })
+      .post("https://votingprojectapi.onrender.com/emailverify/", { email })
       .then(() => {
         localStorage.setItem("user_email", email);
         setTimeout(() => {

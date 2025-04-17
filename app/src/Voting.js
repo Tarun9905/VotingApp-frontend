@@ -328,7 +328,7 @@ const VotingPage = () => {
 
   const fetchVoteCounts = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:8000/count/");
+      const response = await axios.get("https://votingprojectapi.onrender.com/count/");
       setVoteCounts(response.data);
     } catch (error) {
       console.error("Failed to fetch vote counts:", error);
@@ -343,7 +343,7 @@ const VotingPage = () => {
     const email = localStorage.getItem("user_email");
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/castvote/", {
+      const response = await axios.post("https://votingprojectapi.onrender.com/castvote/", {
         email: email,
         options: selectedOption,
       });
